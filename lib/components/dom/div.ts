@@ -1,9 +1,10 @@
 import { createNode } from "../../core/createNode";
+import { Children } from "../../core/types";
 
-export const div = (nodes: any[], props?: any) => {
+export const div = (children: Children, props?: any) => {
   return createNode({
     type: "div",
-    props: props,
-    children: nodes,
+    props,
+    children,
   });
 };

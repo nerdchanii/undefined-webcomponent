@@ -1,9 +1,10 @@
 import { createNode } from "../../core/createNode";
+import { Children } from "../../core/types";
 
-export function header(node: Node[], props: any) {
+export function header(children: Children, props?: any) {
   return createNode({
     type: "header",
-    props: props,
-    children: node,
+    props,
+    children,
   });
 }
