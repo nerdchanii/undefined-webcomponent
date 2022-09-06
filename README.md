@@ -1,6 +1,6 @@
 # title-undefined-webComponent
 
-I don't know how to name this project yet.😅<br/>
+I don't know what is a suitable name for this project yet😅<br/>
 First of all, It is a ***web component***.<br/>
 It aims to create a web component library with an easy and pure set of Pure Functions.<br/>
 
