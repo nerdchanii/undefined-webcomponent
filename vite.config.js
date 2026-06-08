@@ -1,13 +1,16 @@
-import { defineConfig } from 'vite'
-import { resolve } from 'path';
-//vite config
-/** @type {import('vite').UserConfig} */
-export default defineConfig({
-  // config for vite
-  alias: {
-    '@src': resolve(__dirname, 'src'),
-    '@components': resolve(__dirname, 'lib/components'),
-    '@core': resolve(__dirname, 'lib/core'),
-  },
+import { resolve } from "path";
+import { defineConfig } from "vite";
 
-})
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      input: resolve(__dirname, "examples/bla-bla/index.html"),
+    },
+  },
+  resolve: {
+    alias: {
+      "@packages/cheapers": resolve(__dirname, "packages/cheapers/src"),
+      "@examples": resolve(__dirname, "examples"),
+    },
+  },
+});

@@ -3,8 +3,13 @@
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
-    "moduleResolution": "Node",
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@packages/cheapers",
     "strict": true,
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -16,10 +21,19 @@
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "paths": {
-      "@src/*": ["./src"],
-      "@components/*": ["./lib/components"],
-      "@core/*": ["./lib/core"]
+      "@packages/cheapers/*": [
+        "./packages/cheapers/src/*"
+      ],
+      "@packages/cheapers": [
+        "./packages/cheapers/src/index.ts"
+      ],
+      "@examples/*": [
+        "./examples/*"
+      ]
     }
   },
-  "include": ["src"]
+  "include": [
+    "packages/**/*",
+    "examples/**/*"
+  ]
 }
