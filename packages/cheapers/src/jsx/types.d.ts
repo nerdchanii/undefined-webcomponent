@@ -1,4 +1,4 @@
-import type { CheapElement } from "./jsx-runtime";
+import type { CheapElement } from "../model/types";
 
 declare global {
   namespace JSX {
