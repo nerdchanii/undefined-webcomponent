@@ -1,10 +1,19 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 
+const exampleRoot = resolve(__dirname, "examples/bla-bla");
+
 export default defineConfig({
+  root: exampleRoot,
+  esbuild: {
+    jsx: "automatic",
+    jsxImportSource: "@packages/cheapers",
+  },
   build: {
+    outDir: resolve(__dirname, "dist/examples/bla-bla"),
+    emptyOutDir: true,
     rollupOptions: {
-      input: resolve(__dirname, "examples/bla-bla/index.html"),
+      input: resolve(exampleRoot, "index.html"),
     },
   },
   resolve: {
